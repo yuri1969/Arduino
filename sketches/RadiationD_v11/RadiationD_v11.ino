@@ -12,6 +12,9 @@
 
 // Digital pin #2 is usable for interrupts
 const byte CAJOE_INPUT = 2;
+// This is a property of GM tube M4011
+// cpm / 151 = uSv/h
+const byte TUBE_CONVERSION_INDEX = 151;
 const word MINUTE = 60000;
 
 // Limits cpm to 65535
@@ -39,6 +42,7 @@ void loop() {
   }
 
   Serial.println(String(cpm) + "cpm");
+  Serial.println(String(cpm / TUBE_CONVERSION_INDEX) + "uSv/h");
 
   impulseCounter = 0;
 }
