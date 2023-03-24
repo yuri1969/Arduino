@@ -2,10 +2,13 @@
  *  UNO Rev3
  *  Geiger-Counter-RadiationD-v1.1(CAJOE)
  *
- *  Wiring:
- *    GND -> GND
- *    5V  -> 5V
- *    VIN -> DIGITAL #2
+ *  Wiring
+ *  ----------------------------
+ *  RadiationD_v11 -> UNO Rev3
+ *  ----------------------------
+ *             GND -> GND
+ *             5V  -> 5V
+ *             VIN -> DIGITAL #2
  *
  */
 #include <util/atomic.h>
@@ -51,4 +54,3 @@ void loop() {
 void registerIncomingImpulse() {
   impulseCounter++;
 }
-
